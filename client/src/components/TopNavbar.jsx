@@ -2,18 +2,18 @@ import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import logo from '../assets/images/ttb-logo.jpg';
+import logo from '../assets/logo/black.png'
 import './index.css';
 
 const TopNavbar = () => {
   return (
     <>
-      <Navbar fixed="top" className="top-navbar" bg="dark" variant="dark" expand="lg">
+      <Navbar fixed="top" className="top-navbar p-0" bg="dark" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand href="/">
             <img 
-            // src={logo} 
-            width="90" height="30" className="d-inline-block align-top" alt="logo" />
+            src={logo} 
+            width="180" height="60" className="d-inline-block align-top" alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
