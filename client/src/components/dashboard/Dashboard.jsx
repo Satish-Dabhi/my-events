@@ -1,10 +1,10 @@
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Box, Button, Tab, Tabs } from '@mui/material';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import DataTable from './DataTable';
 
-const Dashboard = () => {
+const Dashboard = ({ userData }) => {
   const [selectedTab, setSelectedTab] = useState(1);
   let navigate = useNavigate();
 
@@ -22,8 +22,8 @@ const Dashboard = () => {
         sx={{ borderRight: 1, borderColor: 'divider', height: '100vh' }}
       >
         <>
-          <AccountCircleIcon sx={{ fontSize: '10rem' }} />
-          <h6>User Name</h6>
+          {/* <AccountCircleIcon sx={{ fontSize: '10rem' }} /> */}
+          <h6>{userData && userData?.name}</h6>
         </>
         <Tab label="About Yourself" />
         <Tab label="Your Property" />

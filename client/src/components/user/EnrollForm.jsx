@@ -1,7 +1,6 @@
 import { Button } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/system';
-import { withTheme } from '@rjsf/core';
 import { Theme5 as Mui5Theme } from '@rjsf/material-ui';
 import CryptoJS from 'crypto-js';
 import { useEffect, useState } from 'react';
@@ -13,8 +12,9 @@ import { updateSnackBar } from '../../redux/common/snackBarSlice';
 import { createUser, loginUser, verifyCode } from '../../redux/user/userSlice';
 import { getSchemaFieldTitle, setLocalStorageObject } from '../../services/utils';
 import * as constant from '../../services/utils/constant';
-import ObjectFieldTemplate from '../ObjectFieldTemplate';
 import RadioWidget from '../customWidgets/RadioWidget';
+import ObjectFieldTemplate from '../jsonForm/ObjectFieldTemplate';
+import { withTheme } from '@rjsf/core';
 
 const theme = createTheme({
     components: {
@@ -225,7 +225,7 @@ const EnrollForm = (props) => {
                             <Button
                                 onClick={() => setValidateForm(true)}
                                 variant="contained"
-                                class="btn btn-outline-success"
+                                className="btn btn-outline-success"
                                 type="submit"
                                 style={{ width: '50%', margin: '5%' }}
                             >

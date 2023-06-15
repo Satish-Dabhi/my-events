@@ -1,0 +1,35 @@
+{
+    "title": "",
+    "type": "object",
+    "required": [
+        "name",
+        "email",
+        "password",
+        "rePassword"
+    ],
+    "properties": {
+        "name": {
+            "title": "Name",
+            "type": "string",
+            "md": 12
+        },
+        "email": {
+            "title": "Email",
+            "type": "string",
+            "format": "email",
+            "md": 12
+        },
+        "password": {
+            "title": "Password",
+            "type": "string",
+            "format": "password",
+            "md": 12
+        },
+        "rePassword": {
+            "type": "string",
+            "title": "Re-enter Password",
+            "format": "password",
+            "md": 12
+        }
+    }
+}

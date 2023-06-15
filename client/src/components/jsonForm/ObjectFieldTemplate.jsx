@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import * as constant from "../services/utils/constant";
+import * as constant from '../../services/utils/constant';
 
 const ObjectFieldTemplate = ({
     DescriptionField,

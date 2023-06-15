@@ -8,10 +8,10 @@ import registrationSchema from '../../formsDefinitions/userRegistration/schema.j
 import registrationUiSchema from '../../formsDefinitions/userRegistration/uiSchema.json';
 import { POST_API, VERIFY_TOKEN_END_POINT } from '../../redux/services/api';
 import { getLocalStorageObject } from '../../services/utils';
-import EnrollForm from './EnrollForm';
 import CryptoJS from 'crypto-js';
 import './user.css';
 import { LOCAL_OBJECT_SECRET_KEY } from '../../services/utils/constant';
+import EnrollForm from './EnrollForm';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -38,6 +38,7 @@ const SignInSignUpForms = () => {
     let navigate = useNavigate();
 
     useEffect(() => {
+        console.log("cmp called");
         async function validToken() {
             const resp = await POST_API(VERIFY_TOKEN_END_POINT, { token: userToken?.token });
             if (resp?.valid) {

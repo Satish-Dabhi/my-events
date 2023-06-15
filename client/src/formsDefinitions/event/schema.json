@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+      "eventName": { "type": "string" },
+      "eventDates": {
+        "type": "object",
+        "properties": {
+          "fromDate": { "type": "string", "format": "date" },
+          "toDate": { "type": "string", "format": "date" }
+        },
+        "required": ["fromDate", "toDate"]
+      },
+      "address": { "type": "string" },
+      "eventDescription": { "type": "string" },
+      "totalEntries": { "type": "integer", "minimum": 0 },
+      "ticketPrices": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string" },
+            "price": { "type": "number", "minimum": 0 }
+          },
+          "required": ["type", "price"]
+        }
+      },
+      "eventBy": { "type": "string" }
+    },
+    "required": ["eventName", "eventDates", "address", "eventDescription", "totalEntries", "ticketPrices", "eventBy"]
+  }
+  
