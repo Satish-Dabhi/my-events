@@ -1,3 +1,119 @@
-#root {
-  margin-top: 5%;
+.top-div {
+  height: 80px;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  justify-content: flex-end;
+  display: flex;
+  background-image: url(/src/assets/event-home4.jpg);
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  line-height: 60px;
+}
+
+#logo {
+  margin: auto;
+  margin-left: 5vw;
+  transition: all ease 0.3s;
+}
+
+#logo:hover {
+  transform: scale(1.1);
+}
+
+#logo a {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  width: 30vw;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fffffdfc;
+  margin: auto;
+  position: absolute;
+  padding: 20vh 0;
+  font-size: 24px;
+  transition: all ease 0.3s;
+}
+
+.nav-links li {
+  color: #202020;
+  transition: all ease 0.2s;
+  font-weight: 400;
+  margin: auto;
+}
+
+.nav-links a {
+  display: flex;
+}
+
+.nav-links li:hover {
+  transform: scale(1.2);
+}
+
+.burger {
+  cursor: pointer;
+  padding: 5px;
+  margin: auto calc(20px + 2vw) auto auto;
+  z-index: 20;
+}
+
+.burger-line {
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  border-radius: 22%;
+  transition: all ease 0.3s;
+}
+
+.line-1 {
+  width: 18px;
+}
+
+.line-2 {
+  width: 25px;
+}
+
+.line-3 {
+  width: 22px;
+}
+
+.line-1.line-true {
+  width: 24px;
+  transform: rotate(-45deg) translateY(10px);
+  background-color: black;
+}
+
+.line-2.line-true {
+  visibility: hidden;
+  width: 0;
+}
+
+.line-3.line-true {
+  width: 24px;
+  transform: rotate(45deg) translateY(-10px);
+  background-color: black;
+}
+
+.visibility-false {
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+}
+
+.visibility-true {
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
 }

@@ -1,3 +1,5 @@
-.MuiDataGrid-menuIcon {
+#dashboard .MuiDataGrid-menuIcon {
   display: none !important;
 }
+
+#dashboard .title {}
