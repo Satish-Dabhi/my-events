@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import bg1 from '../assets/bg1.jpg';
-import bg2 from '../assets/bg2.jpg';
-import bg3 from '../assets/bg3.jpg';
+import Typewriter from 'typewriter-effect';
+import bg1 from '../assets/event-home.jpg';
+import bg2 from '../assets/event-home2.jpg';
+import bg3 from '../assets/event-home3.jpg';
 
 const MyCarousel = () => {
   const [index, setIndex] = useState(0);
@@ -12,28 +13,41 @@ const MyCarousel = () => {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect} fade={true}>
       <Carousel.Item>
         <img className="d-block w-100" src={bg1} alt="First slide" />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <Typewriter
+            options={{
+              strings: ['Music Concert'],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img className="d-block w-100" src={bg2} alt="Second slide" />
-
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Typewriter
+            options={{
+              strings: ['Fashion Show'],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img className="d-block w-100" src={bg3} alt="Third slide" />
-
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <Typewriter
+            options={{
+              strings: ['Culinary Festival'],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

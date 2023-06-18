@@ -1,8 +1,20 @@
 import * as constant from './constant';
-// import agriculturalPropertyIcon from '../../assets/images/agricultural-property.png';
-// import commercialPropertyIcon from '../../assets/images/commercial-property.jpg';
-// import industrialPropertyIcon from '../../assets/images/industrial-property.jpg';
-// import residentialPropertyIcon from '../../assets/images/residential-property.png';
+import bg1Icon from '../../assets/bg1.jpg';
+import bg2Icon from '../../assets/bg2.jpg';
+import bg3Icon from '../../assets/bg3.jpg';
+
+export const getCardImageByPropertyType = (propertyType) => {
+  switch (propertyType) {
+    case 1:
+      return bg1Icon;
+    case 2:
+      return bg2Icon;
+    case 3:
+      return bg3Icon;
+    default:
+      return bg1Icon;
+  }
+};
 
 export function setSessionStorageObject(key, value) {
   sessionStorage.setItem(key, value);
