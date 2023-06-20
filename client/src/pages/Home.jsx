@@ -3,8 +3,8 @@
 // import homeImage from '../assets/event-home4.jpg';
 // import Typewriter from 'typewriter-effect';
 import { Container, Grid, Typography } from '@mui/material';
-import EventCard from "../components/event/EventCard";
 import MyCarousel from "../components/MyCarousel";
+import EventCard from "../components/event/EventCard";
 import EventCategories from '../components/event/EventCategories';
 
 const eventsArray = [
@@ -82,35 +82,10 @@ const eventsArray = [
   }
 ]
 
-
-
-
 const Home = () => {
-  // const insideStyles = {
-  //   color: '#fff',
-  //   padding: 20,
-  //   position: "absolute",
-  //   top: "50%",
-  //   left: "50%",
-  //   transform: "translate(-50%,-50%)",
-  //   fontSize: "2.5rem"
-  // };
   return (
     <>
       <MyCarousel />
-      {/* <Parallax bgImage={homeImage} strength={500}>
-        <div style={{ height: 500 }}>
-          <div style={insideStyles}>
-            <Typewriter
-              options={{
-                strings: ['ASQUARE EVENTS', 'WE CREATE, YOU CELEBRATE'],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </div>
-        </div>
-      </Parallax> */}
       <Container maxWidth="lg" sx={{ paddingTop: '70px' }}>
         <EventCategories />
 

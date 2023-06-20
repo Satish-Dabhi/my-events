@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 import { getCardImageByPropertyType } from '../../services/utils';
+import './event.css';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const EventCard = ({ propertyDetails }) => {
     let navigate = useNavigate();
@@ -24,19 +26,19 @@ const EventCard = ({ propertyDetails }) => {
             />
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 <CardContent sx={{ flex: '1 0 auto' }}>
-                    <Typography component="div" variant="h5">
+                    <Typography component="div" variant="h5" sx={{ textDecoration: 'underline' }}>
                         {propertyDetails?.eventName}
                     </Typography>
-                    <Typography variant="h6" color="text.secondary" component="div">
+                    <Typography variant="h6" color="text.secondary" component="div" sx={{ color: 'red' }}>
                         {propertyDetails?.date}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary" component="div">
-                        {propertyDetails?.address}
+                        <LocationOnIcon />{propertyDetails?.address}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary" component="div">
                         Event By : {propertyDetails?.owner}
                     </Typography>
-                    <Typography variant="subtitle2" color="text.secondary" component="div">
+                    <Typography variant="subtitle2" color="text.secondary" component="div" className='only-3-line'>
                         {propertyDetails?.description}
                     </Typography>
                     <CardActions>
